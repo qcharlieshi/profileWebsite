@@ -8,6 +8,10 @@ import store from './store'
 
 import AppContainer from './components/AppContainer'
 import ParallaxContainer from './containers/ParallaxContainer';
+import HomeContainer from './containers/HomeContainer';
+
+import ParallaxTwoContainer from './containers/ParallaxTwoContainer';
+import ParallaxExplanationContainer from './containers/ParallaxExplanationContainer';
 
 import Login from './components/LoginComponents/Login'
 import WhoAmI from './components/LoginComponents/WhoAmI'
@@ -18,7 +22,12 @@ render (
     <Router history={hashHistory}>
 
       <Route path="/" component={AppContainer}>
-          <Route path="/parallax" component={ParallaxContainer} />
+          <IndexRedirect to="/home" />
+          <Route path="/home" component={ParallaxContainer} />
+          <Route path="/home" component={HomeContainer} />
+
+          <Route path="/parallax" component={ParallaxTwoContainer} />
+          <Route path="/parallaxexplain" component={ParallaxExplanationContainer} />
 
       </Route>
 

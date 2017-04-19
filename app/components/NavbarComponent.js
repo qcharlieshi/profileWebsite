@@ -21,9 +21,9 @@ export default class NavbarComponent extends Component {
             style = {
                 backgroundColor: '#000'
             }
-        } else if (this.props.pathname === '/parallax') {
+        } else if (this.props.pathname === '/home') {
             style = {
-                backgroundColor: '#ffaf1b'
+                backgroundColor: '#4286d7'
             }
         }
 
