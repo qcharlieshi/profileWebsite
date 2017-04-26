@@ -28,22 +28,27 @@ export default class NavbarComponent extends Component {
         }
 
 
-
-
         return (
-            <ul className="nav nav-tabs">
-                <li role="presentation" className="active" style={style}><a href="#" style={style}>Me: Charlie Shi</a></li>
-                <li role="presentation"><a href="#">My Projects</a></li>
-                <li role="presentation"><a href="#">My Blog</a></li>
-            </ul>
-
+          <div className ="navContainer highlightTextIn" style={style}>
+                <a alt="HOME" href="#">HOME</a>
+                <a href="#">PORTFOLIO</a>
+                <a href="#">BLOG</a>
+                <a href="#">ABOUT</a>
+          </div>
         )
 
 
 
     }
 
-
+// <div className ="container highlightTextIn">
+// <ul className="nav nav-tabs">
+// <li role="presentation" className="active"><a href="#" style={style}>HOME</a></li>
+// <li role="presentation"><a href="#">PORTFOLIO</a></li>
+// <li role="presentation"><a href="#">BLOG</a></li>
+// <li role="presentation"><a href="#">ABOUT</a></li>
+// </ul>
+// </div>
 
 
 }

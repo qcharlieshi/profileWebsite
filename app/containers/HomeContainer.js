@@ -3,25 +3,27 @@
  */
 
 import React, {Component} from 'react';
-
+import ParallaxComponent from './ParallaxContainer';
 export default class HomeContainer extends Component {
     constructor(props) {
         super(props)
     }
 
+    componentDidMount() {
+      console.log('scrolling?')
+      window.scrollTo(50, 50);
+    }
+
     render() {
-        console.log('in home container render function');
+        //const backgroundStyle = { position: 'absolute', backgroundColor: '#000000', height: '100%', top: '500px'}
+
         return(
 
-            <div className="row" id="home-container">
-                <h3>inside homecontainer div</h3>
+            <div className="row">
+              <div className="col-lg-12" id="home-container" />
+              <ParallaxComponent/>
             </div>
-
-
-
         )
-
-
 
     }
 

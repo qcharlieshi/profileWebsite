@@ -1,5 +1,61 @@
+/*Fonts*/
+@font-face {
+    font-family: "Tungsten";
+    src: url(../fonts/Tungsten-Semibold.ttf) format("truetype");
+}
+
 #home-container {
+    position: absolute;
+    top: 600px;
     height: 1000px;
+    width: 100%;
     background-color: black;
     z-index: 100;
 }
+
+
+/*Text Highlight Navbar*/
+div.navContainer
+{
+    font-family: Tungsten;
+    margin: 0 auto;
+    padding: 0em 3em;
+    text-align: center;
+}
+
+div.navContainer a
+{
+    color: #000000;
+    text-decoration: none;
+    font: 50px Tungsten;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+div.highlightTextIn a:hover
+{
+    /*position: absolute;*/
+    color: #000000;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 0.5s;
+    transform: scale(0.5);
+    opacity: 1;
+}
+
+/* Highlight text in  */
+div.highlightTextIn a
+{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/*div.highlightTextIn a:hover*/
+/*{*/
+    /*transform: scale(1.2);*/
+/*}*/

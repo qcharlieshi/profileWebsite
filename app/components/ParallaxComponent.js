@@ -20,6 +20,9 @@ export default class ParallaxComponent extends Component {
             left: this.props.left,
             right: this.props.right,
 
+            maxTop: this.props.maxTop || null,
+
+
             
             position: 'absolute',
             zIndex: this.props.zindex || '0',
@@ -76,12 +79,12 @@ export default class ParallaxComponent extends Component {
         //get current scroll level, # of pixels from the absolute top
         const pageTop = window.scrollY;
         const newTop = (top - (pageTop * speed));
-        console.log('page top', pageTop);
-        console.log('new top', newTop);
+        // console.log('page top', pageTop);
+        // console.log('new top', newTop);
 
         //Set new top position
-        this.refs.parallaxElement.style.top = `${newTop}px`;
-        //this.refs.parallaxElement.style.transform = `translate3d(0, ${newTop}px, 0)`;
+        // this.refs.parallaxElement.style.top = `${newTop}px`;
+        this.refs.parallaxElement.style.transform = `translate3d(0, ${newTop}px, 0)`;
     }
 
     render() {
@@ -98,36 +101,4 @@ export default class ParallaxComponent extends Component {
 
 
 
-// var images = document.querySelectorAll('.parallax__image');
 
-// function setTopOffset(image) {
-//   var imageHeight = image.offsetHeight;
-//   var containerHeight = image.parentNode.offsetHeight;
-//   var pageHeight = document.documentElement.clientHeight;
-//   var imageDistance = imageHeight - containerHeight;
-//   var containerTop = image.parentNode.getBoundingClientRect().top;
-//   var distancePercent = 0;
-//   var offsetTop = 0;
-
-//   if (containerTop >= pageHeight) {
-//     distancePercent = 0;
-//   } else if (containerTop <= -containerHeight) {
-//     distancePercent = 1;
-//   } else {
-//     distancePercent = (containerTop + containerHeight) / (pageHeight + containerHeight);
-//   }
-
-//   offsetTop = distancePercent * imageDistance * -1;
-//   image.style.transform = 'translate3d(0,' + offsetTop + 'px, 0)';
-// }
-
-// function updateImages() {
-//   [].forEach.call(images, setTopOffset);
-// }
-
-// function animate() {
-//   requestAnimationFrame(animate);
-//   updateImages();
-// }
-
-// animate();

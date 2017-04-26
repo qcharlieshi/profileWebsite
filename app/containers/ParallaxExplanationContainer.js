@@ -11,7 +11,7 @@ export default class ParallaxExplanationContainer extends Component {
 
         return (
                 <ParallaxComponent
-                    speed = {10}
+                    speed = {5}
                     zindex = "0"
                     top = '20%'
                     image = {parallaxImageNY}
