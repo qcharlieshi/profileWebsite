@@ -27,13 +27,18 @@ export default class NavbarComponent extends Component {
             }
         }
 
+        const glyphiconStyle = {
+          fontSize: '20px',
+          verticalAlign: '10px',
+          paddingRight: '10px'
+        }
 
         return (
-          <div className ="navContainer highlightTextIn" style={style}>
-                <a alt="HOME" href="#">HOME</a>
-                <a href="#">PORTFOLIO</a>
-                <a href="#">BLOG</a>
-                <a href="#">ABOUT</a>
+          <div className ="navContainer highlightTextIn">
+            <a alt="HOME" href="/#/home" style={style}><span className="glyphicon glyphicon-home" style={glyphiconStyle} /> HOME</a>
+                <a href="/#/portfolio"><span className="glyphicon glyphicon-picture" style={glyphiconStyle} /> PORTFOLIO</a>
+                <a href="#"><span className="glyphicon glyphicon-list-alt" style={glyphiconStyle} />BLOG</a>
+                <a href="#"><span className="glyphicon glyphicon-user" style={glyphiconStyle} /> ABOUT</a>
           </div>
         )
 

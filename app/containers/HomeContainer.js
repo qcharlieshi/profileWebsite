@@ -11,6 +11,7 @@ export default class HomeContainer extends Component {
 
     componentDidMount() {
       console.log('scrolling?')
+      //Not sure if still needed, scrolls page slightly to make scroll wheel appear
       window.scrollTo(50, 50);
     }
 
@@ -19,8 +20,8 @@ export default class HomeContainer extends Component {
 
         return(
 
-            <div className="row">
-              <div className="col-lg-12" id="home-container" />
+            <div>
+              {/*<div className="col-lg-12" id="home-container" />*/}
               <ParallaxComponent/>
             </div>
         )

@@ -7,7 +7,9 @@ import {connect, Provider} from 'react-redux'
 import store from './store'
 
 import AppContainer from './containers/AppContainer'
+
 import HomeContainer from './containers/HomeContainer';
+import PortfolioContainer from './containers/PortfolioContainer';
 
 import ParallaxTwoContainer from './containers/ParallaxTwoContainer';
 import ParallaxExplanationContainer from './containers/ParallaxExplanationContainer';
@@ -23,6 +25,7 @@ render (
       <Route path="/" component={AppContainer}>
           <IndexRedirect to="/home" />
           <Route path="/home" component={HomeContainer} />
+          <Route path="/portfolio" component={PortfolioContainer} />
 
 
           <Route path="/parallax" component={ParallaxTwoContainer} />

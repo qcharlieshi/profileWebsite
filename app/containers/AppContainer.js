@@ -13,11 +13,6 @@ export default class AppContainer extends Component {
 
 
     render() {
-        //pass props down to children
-        // let children = this.props.children ? React.cloneElement(this.props.children, this.props) : null;
-        //Render out children
-        console.log("app container",this.props);
-
         return (
             <div id="main" className="container-fluid">
                 <div className="row">
@@ -25,22 +20,10 @@ export default class AppContainer extends Component {
                 </div>
 
                 <div className="row">
-                    <div className="col">
-                        {this.props.children}
-                    </div>
+                    {this.props.children}
                 </div>
-
-                <div style={{height: 2000, color: '#4286d7'}}></div>
             </div>
         )
     }
 }
 
-
-
-{/*<div id="main" className="container-fluid">*/}
-    {/*<div className="col">*/}
-        {/*<h3>test</h3>*/}
-        {/*{children}*/}
-    {/*</div>*/}
-{/*</div>*/}
