@@ -4,7 +4,7 @@
 
 
 import React, {Component} from 'react';
-import {Route, Link} from 'react-router-dom';
+import {Route, Link, Redirect} from 'react-router-dom';
 import NavbarComponent from '../components/NavbarComponent';
 
 import HomeContainer from './HomeContainer';
@@ -17,7 +17,10 @@ export default class AppContainer extends Component {
 
 
     render() {
-      console.log('inside app container')
+        //Route Switch
+
+
+
         return (
             <div id="main" className="container-fluid">
                 <div className="row">
@@ -25,9 +28,11 @@ export default class AppContainer extends Component {
                 </div>
 
                 <div className="row">
-                  { (this.props.location.pathname === "/home") ?
-                  <Route path="/home" component={HomeContainer} /> :
-                  <Route path="/portfolio" component={PortfolioContainer} /> }
+                  <Route path="/home" component={HomeContainer} />
+                  <Route path="/portfolio" component={PortfolioContainer} />
+                  <Redirect to="/home" />
+
+
                 </div>
             </div>
         )

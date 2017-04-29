@@ -3,6 +3,7 @@
  */
 
 import React, { Component } from 'react';
+import { throttle } from '../utils/throttle';
 
 export default class ParallaxComponent extends Component {
     constructor(props) {
@@ -34,23 +35,13 @@ export default class ParallaxComponent extends Component {
             backgroundImage: `url(${this.props.image})`
         };
 
-        this.handleScroll = this.throttle(this.handleScroll.bind(this), 10);
+        this.handleScroll = throttle(this.handleScroll.bind(this), 10);
 
         //Convert top to px value
         this.top = this.getTop();
     }
 
-    throttle(fn, wait) {
-        //wait in milliseconds
-        let time = Date.now()
 
-        return function() {
-            if ((time + wait - Date.now()) < 0) {
-                fn()
-                time = Date.now()
-            }
-        }
-    }
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);

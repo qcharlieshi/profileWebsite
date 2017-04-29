@@ -4,16 +4,18 @@
 
 import React, {Component} from 'react';
 import ParallaxComponent from '../components/ParallaxComponent';
+import NavbarComponent from '../components/NavbarComponent';
+
+
 
 export default class HomeContainer extends Component {
     constructor(props) {
-        super(props)
+      super(props)
     }
 
     componentDidMount() {
-      // console.log('scrolling?')
-      //Not sure if still needed, scrolls page slightly to make scroll wheel appear
-      window.scrollTo(50, 50);
+      //Scrolls page slightly correct for display errors
+      window.scrollTo(5, 5);
     }
 
     render() {
@@ -98,7 +100,6 @@ export default class HomeContainer extends Component {
                                                         zindex='-5'
                                                         top='-10%'
               />
-
             </div>
 
             {/*All black component*/}
@@ -111,8 +112,6 @@ export default class HomeContainer extends Component {
 
 
             </ParallaxComponent>
-
-
           </div>
         )
     }

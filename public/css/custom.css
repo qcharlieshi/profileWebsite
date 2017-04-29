@@ -24,26 +24,15 @@ div.navContainer
     height: 64px;
     background-color: #1D2731;
     box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.5);
-    z-index: 100;
-
-}
-
-div.navContainer a
-{
-    text-decoration: none;
-    font: 50px Tungsten;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    position: relative;
-    z-index: 100;
-    cursor: pointer;
+    z-index: 1000;
+    width: 100%;
 }
 
 div.highlightTextIn a:hover
 {
     color: #000000;
-    background-color: #D9B310;
-    padding: 10px;
+    background-color: #D9B310 !important;
+    /*padding: 10px;*/
     overflow: hidden;
     content: attr(alt);
     transition: all 1s;
@@ -55,4 +44,11 @@ div.highlightTextIn a:hover
 div.highlightTextIn a
 {
     color: white;
+    text-decoration: none;
+    font: 50px Tungsten;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
 }
