@@ -9,7 +9,9 @@ export default class PortfolioContainer extends Component {
 
   render() {
     return (
-      <div>test</div>
+      <div>
+        <div style={{backgroundImage: 'url(\'../images/portfolioHeader.png\')', height: '200px', zIndex: '-1000'}}></div>
+      </div>
     )
   }
 

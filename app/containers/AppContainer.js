@@ -4,7 +4,11 @@
 
 
 import React, {Component} from 'react';
+import {Route, Link} from 'react-router-dom';
 import NavbarComponent from '../components/NavbarComponent';
+
+import HomeContainer from './HomeContainer';
+import PortfolioContainer from './PortfolioContainer';
 
 export default class AppContainer extends Component {
     constructor(props) {
@@ -13,6 +17,7 @@ export default class AppContainer extends Component {
 
 
     render() {
+      console.log('inside app container')
         return (
             <div id="main" className="container-fluid">
                 <div className="row">
@@ -20,7 +25,9 @@ export default class AppContainer extends Component {
                 </div>
 
                 <div className="row">
-                    {this.props.children}
+                  { (this.props.location.pathname === "/home") ?
+                  <Route path="/home" component={HomeContainer} /> :
+                  <Route path="/portfolio" component={PortfolioContainer} /> }
                 </div>
             </div>
         )

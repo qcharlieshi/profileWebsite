@@ -4,14 +4,14 @@
     src: url(../fonts/Tungsten-Semibold.ttf) format("truetype");
 }
 
-#home-container {
-    position: relative;
-    top: 800px;
-    height: 1000px;
-    width: 100%;
-    background-color: black;
-    z-index: 100;
-}
+/*#home-container {*/
+    /*position: relative;*/
+    /*top: 800px;*/
+    /*height: 1000px;*/
+    /*width: 100%;*/
+    /*background-color: black;*/
+    /*z-index: 100;*/
+/*}*/
 
 
 /*Text Highlight Navbar*/
@@ -21,7 +21,7 @@ div.navContainer
     /*margin: 0 auto;*/
     /*padding: 0em 3em;*/
     text-align: center;
-    height: 65px;
+    height: 64px;
     background-color: #1D2731;
     box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.5);
     z-index: 100;
