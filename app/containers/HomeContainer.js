@@ -11,20 +11,36 @@ import NavbarComponent from '../components/NavbarComponent';
 export default class HomeContainer extends Component {
     constructor(props) {
       super(props)
+
+      this.state = {
+        yellowCardStyle: {opacity: 0}
+      }
     }
 
     componentDidMount() {
       //Scrolls page slightly correct for display errors
-      window.scrollTo(5, 5);
+      window.scrollTo(50, 50);
+      window.scrollTo(0, 0);
+    }
+
+    componentWillReceiveProps() {
+      this.handleScroll();
+    }
+
+    handleScroll() {
+      let opacity = this.props.scroll / 400;
+
+      this.setState({yellowCardStyle: {opacity}})
     }
 
     render() {
-      const parallaxImage = [];
-
       //assign all parallax images
+      const parallaxImage = [];
       for (let i = 0; i <= 8; i++) {
         parallaxImage.push(`'../images/parallax/parallax${i}edit.png'`);
       }
+
+      console.log('homecontiner', this.props.scroll)
 
         return(
           <div>
@@ -109,7 +125,16 @@ export default class HomeContainer extends Component {
               zindex = '-1'
               top = '48%'
             >
-
+              <div className="yellowCard" style={this.state.yellowCardStyle}>
+                <div className="headerText">Full Stack Software Engineer & Designer</div>
+                <hr className="fancy"/>
+                <div>
+                  <p className="bodyText">
+                  Hello my name is Charlie Shi and I'm a software engineer
+                  that graduated from Emory University in 2013
+                  </p>
+                </div>
+              </div>
 
             </ParallaxComponent>
           </div>

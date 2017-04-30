@@ -14,61 +14,79 @@ export default class NavbarComponent extends Component {
   constructor(props) {
     super(props)
 
+    // this.state = {
+    //   navbarstyle: {position: 'static'}
+    //   currentScroll: this.props.currentScroll
+    // }
+
     this.state = {
       position: 'static'
     }
-
-    this.handleScroll = throttle(this.handleScroll.bind(this), 10);
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+  componentWillReceiveProps() {
+    this.handleScroll();
   }
 
   handleScroll() {
     //Set navbar to fixed once it reaches a certain point on each page
-
     if (this.props.pathname === '/home') {
-      if (window.scrollY > 450) this.setState(() => {return {position: 'fixed' }});
+      if (this.props.scroll > 450) this.setState({position: 'fixed' });
       else this.setState(() => {return {position: 'static' }});
     }
 
-    if (this.props.pathname === '/portfolio') {
-      if (window.scrollY > 450) this.refs.navbarComponent.style.position = 'fixed';
-      else this.refs.navbarComponent.style.position = 'static';
-    }
-
+    // if (this.props.pathname === '/portfolio') {
+    //   if (this.props.currentScroll > 450) this.refs.navbarComponent.style.position = 'fixed';
+    //   else this.refs.navbarComponent.style.position = 'static';
+    // }
   }
 
   toggleColors() {
-
-  }
-
-  render() {
     let backgroundColorHome, backgroundColorPortfolio, backgroundColorBlog, backgroundColorAbout;
-    console.log(this.props.pathname)
+
+    let defaultColor = '#1D2731';
+
     switch (this.props.pathname) {
       case '/home':
         backgroundColorHome = '#328CC1';
-        backgroundColorPortfolio = '#1D2731';
+        backgroundColorPortfolio = defaultColor;
+        backgroundColorBlog = defaultColor;
+        backgroundColorAbout = defaultColor;
         break;
       case '/portfolio':
         backgroundColorPortfolio = '#D9B310';
-        backgroundColorHome = '#1D2731';
+
+        backgroundColorHome = defaultColor;
+        backgroundColorBlog = defaultColor;
+        backgroundColorAbout = defaultColor;
         break;
       case '/blog':
+        backgroundColorBlog = '#5d8209';
+
+        backgroundColorHome = defaultColor;
+        backgroundColorPortfolio = defaultColor;
+        backgroundColorAbout = defaultColor;
         break;
       case '/about':
+        backgroundColorAbout = '#ad3f0c';
+
+        backgroundColorHome = defaultColor;
+        backgroundColorPortfolio = defaultColor;
+        backgroundColorBlog = defaultColor;
         break;
     }
 
-    //dynamiclly set the navbar color based on the current pathname
-    let styleHome = { backgroundColor: backgroundColorHome};
-    let stylePortfolio = { backgroundColor: backgroundColorPortfolio};
+    return { backgroundColorHome, backgroundColorPortfolio, backgroundColorBlog, backgroundColorAbout}
+  }
+
+  render() {
+    //Dynamiclly Set background tab colors
+    let backgroundColors = this.toggleColors();
+
+    let styleHome = { backgroundColor: backgroundColors.backgroundColorHome};
+    let stylePortfolio = { backgroundColor: backgroundColors.backgroundColorPortfolio};
+    let styleBlog = { backgroundColor: backgroundColors.backgroundColorBlog};
+    let styleAbout = { backgroundColor: backgroundColors.backgroundColorAbout};
 
     const glyphiconStyle = {
       fontSize: '20px',
@@ -80,8 +98,8 @@ export default class NavbarComponent extends Component {
       <div className ="navContainer highlightTextIn" style={{...this.state}}>
         <Link to="/home" style={styleHome}><span className="glyphicon glyphicon-home" style={glyphiconStyle} />HOME</Link>
         <Link to="/portfolio" style={stylePortfolio}><span className="glyphicon glyphicon-picture" style={glyphiconStyle} />PORTFOLIO</Link>
-        <Link to="/blog"><span className="glyphicon glyphicon-list-alt" style={glyphiconStyle} />BLOG</Link>
-        <Link to="/about"><span className="glyphicon glyphicon-user" style={glyphiconStyle} /> ABOUT</Link>
+        <Link to="/blog" style={styleBlog}><span className="glyphicon glyphicon-list-alt" style={glyphiconStyle} />BLOG</Link>
+        <Link to="/about" style={styleAbout}><span className="glyphicon glyphicon-user" style={glyphiconStyle} /> ABOUT</Link>
       </div>
     )
   }

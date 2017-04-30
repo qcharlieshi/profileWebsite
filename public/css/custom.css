@@ -1,17 +1,34 @@
 /*Fonts*/
+/*Tungsten*/
 @font-face {
     font-family: "Tungsten";
     src: url(../fonts/Tungsten-Semibold.ttf) format("truetype");
+    font-weight: bold;
 }
 
-/*#home-container {*/
-    /*position: relative;*/
-    /*top: 800px;*/
-    /*height: 1000px;*/
-    /*width: 100%;*/
-    /*background-color: black;*/
-    /*z-index: 100;*/
-/*}*/
+@font-face {
+    font-family: "Tungsten";
+    src: url(../fonts/Tungsten-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Tungsten";
+    src: url(../fonts/Tungsten-Bold.ttf) format("truetype");
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: "Tungsten";
+    src: url(../fonts/Tungsten-Light.ttf) format("truetype");
+    font-weight: lighter;
+}
+
+/*Archer*/
+@font-face {
+    font-family: "ArcherPro";
+    src: url(../fonts/ArcherPro-Medium.otf) format("opentype");
+}
+
 
 
 /*Text Highlight Navbar*/
@@ -20,6 +37,7 @@ div.navContainer
     font-family: Tungsten;
     /*margin: 0 auto;*/
     /*padding: 0em 3em;*/
+
     text-align: center;
     height: 64px;
     background-color: #1D2731;
@@ -40,15 +58,56 @@ div.highlightTextIn a:hover
     opacity: 1;
 }
 
-/* Highlight text in  */
 div.highlightTextIn a
 {
     color: white;
     text-decoration: none;
     font: 50px Tungsten;
+    font-weight: lighter;
     margin: 0px 10px;
     padding: 10px 10px;
     position: relative;
     z-index: 100;
     cursor: pointer;
+}
+
+/*HR Fancy*/
+hr.fancy {
+    display: block;
+    border: 0;
+    height: 55px;
+    background-image: url(../images/hrFancy.png);
+    background-repeat: no-repeat;
+    /*margin: auto;*/
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+
+/*Home Page Yellow Section*/
+.yellowCard {
+    background-color: #D9B310;
+    position: relative;
+    /*top: 100px;*/
+    height: 300px;
+    overflow: auto;
+    opacity: 1;
+    width: 100%;
+}
+
+.yellowCard > .headerText {
+    font-family: Tungsten;
+    font-size: 100px;
+    width: 100%;
+    text-align: center;
+    /*margin: auto;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+}
+
+.yellowCard .bodyText {
+    font-family: ArcherPro;
+    font-size: 20px;
+    text-align: center;
 }

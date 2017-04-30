@@ -9,33 +9,52 @@ import NavbarComponent from '../components/NavbarComponent';
 
 import HomeContainer from './HomeContainer';
 import PortfolioContainer from './PortfolioContainer';
+import AboutContainer from './AboutContainer';
+
+import { throttle } from '../utils/throttle';
 
 export default class AppContainer extends Component {
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      currentScroll: 0
     }
 
+    this.handleScroll = throttle(this.handleScroll.bind(this), 10);
+  }
 
-    render() {
-        //Route Switch
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 
+  handleScroll() {
+    this.setState(() => {
+      return {currentScroll: window.scrollY}
+    })
+  }
 
-        return (
-            <div id="main" className="container-fluid">
-                <div className="row">
-                    <NavbarComponent pathname={this.props.location.pathname} />
-                </div>
+  render() {
+    return (
+      <div id="main" className="container-fluid">
+        <div className="row">
+          <NavbarComponent scroll={this.state.currentScroll} pathname={this.props.location.pathname} />
+        </div>
 
-                <div className="row">
-                  <Route path="/home" component={HomeContainer} />
-                  <Route path="/portfolio" component={PortfolioContainer} />
-                  <Redirect to="/home" />
+        {/*scroll={this.state.currentScroll}*/}
+        <div className="row">
+          <Route path="/home"  render={() => <HomeContainer scroll={this.state.currentScroll} /> } />
+          <Route path="/portfolio" component={PortfolioContainer} />
+          <Route path="/about" component={AboutContainer} />
 
-
-                </div>
-            </div>
-        )
-    }
+          <Redirect to="/home" />
+        </div>
+      </div>
+    )
+  }
 }
 
