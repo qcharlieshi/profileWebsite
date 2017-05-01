@@ -5,11 +5,6 @@
 import React, { Component } from 'react';
 import {Router, Route, IndexRedirect, IndexRoute, browserHistory, hashHistory, Link} from 'react-router-dom';
 
-import { throttle } from '../utils/throttle';
-
-import HomeContainer from '../containers/HomeContainer';
-import PortfolioContainer from '../containers/PortfolioContainer';
-
 export default class NavbarComponent extends Component {
   constructor(props) {
     super(props)
