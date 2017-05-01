@@ -41,11 +41,9 @@ export default class HomeContainer extends Component {
       }
 
       return(
-        <div className="container">
-          <div className="row">
-            <div className="col">
+        <div>
           {/*Parallax Image Components*/}
-          <div>
+          <div className="row" style={{height: '1000px', width: '1600px', marginTop: '-100px', marginLeft: '0px'}}>
             <ParallaxComponent
                                                       speed='-0.6'
                                                       image={ '../images/parallax/parallax0edit.png' }
@@ -135,10 +133,8 @@ export default class HomeContainer extends Component {
                 </p>
               </div>
             </div>
-
           </ParallaxComponent>
-            </div>
-          </div>
+
         </div>
       )
     }
