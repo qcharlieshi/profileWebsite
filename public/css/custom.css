@@ -44,6 +44,7 @@ div.navContainer
     box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     width: 100%;
+
 }
 
 div.highlightTextIn a:hover
@@ -119,14 +120,16 @@ hr.fancy {
 }
 
 /* ARTICLE TILES */
-article {
-    background: #fff;
-    border-radius: 2px;
-    margin: 0 auto;
-    overflow: auto;
-    position: relative;
-    width: 400px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.075);
+/*.article {*/
+    /*width: 400px;*/
+/*}*/
+
+.article {
+    background-color: #f1f2f3;
+    box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.5);
+    border-color: #f1f2f3;
+    margin-top: 25px;
+    font-family: ArcherPro;
 }
 
 .article-image {
@@ -159,12 +162,16 @@ article {
     font-size: 1.5em;
     font-weight: 300;
     margin-bottom: 16px;
+    font-family: Tungsten;
+    font-weight: bold;
 }
 
 .article-tags {
     color: #a7aab0;
     font-size: .8125em;
     margin-bottom: .8125em;
+    margin: 10px;
+    margin-left: 0px;
 }
 
 .article-footer {
