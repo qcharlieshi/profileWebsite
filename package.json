@@ -11,7 +11,8 @@
     "build-branch": "bin/build-branch.sh",
     "deploy-heroku": "bin/deploy-heroku.sh",
     "start": "check-node-version --node '>= 6.7.0' && bin/setup && nodemon server/start.js && npm run build",
-    "seed": "node db/seed.js"
+    "seed": "node db/seed.js",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
   },
   "author": "Charlie Shi",
   "license": "MIT",
