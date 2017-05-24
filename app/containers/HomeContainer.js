@@ -28,7 +28,7 @@ export default class HomeContainer extends Component {
     }
 
     handleScroll() {
-      let opacity = this.props.scroll / 400;
+      let opacity = this.props.scroll / 600;
 
       this.setState({yellowCardStyle: {opacity}})
     }
@@ -129,10 +129,48 @@ export default class HomeContainer extends Component {
               <div>
                 <p className="bodyText">
                 Hello my name is Charlie Shi and I'm a software engineer
-                that graduated from Emory University in 2013
+                that graduated from Emory University in 2013 with a finance degree.
+                After some time in banking and consulting I made the decision to get
+                back into development by taking the web immersive Fullstack Academy
+                  To view my resume,
+                click here.
                 </p>
               </div>
             </div>
+
+            <div className="homepageInfobox">
+              <div style={{margin: '-20px', backgroundColor: '#D9B310', height: '50px'}}>
+                <h3 className="infoboxText">Technology</h3>
+              </div>
+
+              <div>
+                test content
+              </div>
+            </div>
+
+            <div className="homepageInfobox" id="infoboxCompanies">
+              test content 2
+            </div>
+
+
+          {/*Test Content*/}
+          <ParallaxComponent
+            speed = '.5'
+            color = '#D9B310'
+            zindex = '1000'
+            top = '65%'
+            height = '400px'
+          >
+          </ParallaxComponent>
+
+          <ParallaxComponent
+            speed = '.5'
+            color = '#1D2731'
+            zindex = '-1'
+            top = '80%'
+          >
+          </ParallaxComponent>
+
           </ParallaxComponent>
 
         </div>

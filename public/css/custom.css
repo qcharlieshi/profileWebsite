@@ -14,13 +14,13 @@
 @font-face {
     font-family: "Tungsten";
     src: url(../fonts/Tungsten-Bold.ttf) format("truetype");
-    font-weight: bolder;
+    font-weight: 900;
 }
 
 @font-face {
     font-family: "Tungsten";
     src: url(../fonts/Tungsten-Light.ttf) format("truetype");
-    font-weight: lighter;
+    font-weight: 100;
 }
 
 /*Archer*/
@@ -113,6 +113,33 @@ hr.fancy {
     text-align: center;
 }
 
+.homepageInfobox {
+    float: left;
+    /*background-color: #f1f2f3;*/
+    padding: 20px;
+    width: 47%;
+    height: 50%;
+    margin: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #D9B310;
+    border-radius: 4px;
+}
+
+.infoboxText {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Tungsten;
+    font-weight: 100;
+
+}
+
+#infoboxCompanies {
+    float: right;
+}
+
+
 /*Portfolio Page*/
 .portfolioPage {
     height: 500px;
@@ -120,10 +147,6 @@ hr.fancy {
 }
 
 /* ARTICLE TILES */
-/*.article {*/
-    /*width: 400px;*/
-/*}*/
-
 .article {
     background-color: #f1f2f3;
     box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.5);
