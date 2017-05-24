@@ -91,7 +91,7 @@ hr.fancy {
     background-color: #D9B310;
     position: relative;
     /*top: 100px;*/
-    height: 300px;
+    /*height: 500px;*/
     overflow: auto;
     opacity: 1;
     width: 100%;
@@ -111,6 +111,7 @@ hr.fancy {
     font-family: ArcherPro;
     font-size: 20px;
     text-align: center;
+    padding: 20px;
 }
 
 .homepageInfobox {
@@ -131,14 +132,13 @@ hr.fancy {
     text-align: center;
     vertical-align: middle;
     font-family: Tungsten;
-    font-weight: 100;
-
+    font-weight: bold;
+    font-size: 40px;
 }
 
 #infoboxCompanies {
     float: right;
 }
-
 
 /*Portfolio Page*/
 .portfolioPage {

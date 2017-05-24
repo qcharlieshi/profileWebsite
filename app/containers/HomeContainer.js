@@ -4,8 +4,7 @@
 
 import React, {Component} from 'react';
 import ParallaxComponent from '../components/ParallaxComponent';
-import NavbarComponent from '../components/NavbarComponent';
-
+import Infobox from '../components/Infobox';
 
 
 export default class HomeContainer extends Component {
@@ -122,43 +121,41 @@ export default class HomeContainer extends Component {
             color = '#1D2731'
             zindex = '-1'
             top = '48%'
+            height = '120%'
           >
             <div className="yellowCard" style={this.state.yellowCardStyle}>
               <div className="headerText">Full Stack Software Engineer & Designer</div>
               <hr className="fancy"/>
-              <div>
-                <p className="bodyText">
-                Hello my name is Charlie Shi and I'm a software engineer
-                that graduated from Emory University in 2013 with a finance degree.
-                After some time in banking and consulting I made the decision to get
-                back into development by taking the web immersive Fullstack Academy
-                  To view my resume,
-                click here.
+              <div className="bodyText">
+                <p>
+                  Hello, my name is <b>Charlie Shi</b> and I’m a software engineer that graduated
+                  from Emory University in 2013 with a finance degree. After spending some
+                  time in banking and consulting I made the decision to get back to my first love,
+                  software engineering, by taking the full-time web immersive program at Fullstack Academy.
+                  My current expertise lies in web development whether its creating a server to serve up a
+                  RESTful API or carefully crafting a beautiful component in React and CSS. I pride myself
+                  by having a mix of technical skill and creative ingenuity.
+                </p>
+
+                <p>
+                  To view the rest of my developer story click here. You can view my resume in the about section
+                  of your navbar or find my contact information by scrolling further down.
                 </p>
               </div>
             </div>
 
-            <div className="homepageInfobox">
-              <div style={{margin: '-20px', backgroundColor: '#D9B310', height: '50px'}}>
-                <h3 className="infoboxText">Technology</h3>
-              </div>
-
-              <div>
-                test content
-              </div>
-            </div>
+            <Infobox name="Technology"/>
 
             <div className="homepageInfobox" id="infoboxCompanies">
               test content 2
             </div>
-
 
           {/*Test Content*/}
           <ParallaxComponent
             speed = '.5'
             color = '#D9B310'
             zindex = '1000'
-            top = '65%'
+            top = '75%'
             height = '400px'
           >
           </ParallaxComponent>
