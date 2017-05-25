@@ -128,67 +128,73 @@ hr.fancy {
     border-radius: 4px;
 }
 
-.homepageInfobox img {
-    padding: 20px;
-}
-
 /*Animations for Infobox*/
 .first {
-	-webkit-animation: bannermove 20s linear infinite;
-	   -moz-animation: bannermove 20s linear infinite;
-	    -ms-animation: bannermove 20s linear infinite;
-	     -o-animation: bannermove 20s linear infinite;
-	        animation: bannermove 20s linear infinite;
+	-webkit-animation: iconmove 10s linear infinite;
+	   -moz-animation: iconmove 10s linear infinite;
+	     -o-animation: iconmove 10s linear infinite;
+	        animation: iconmove 10s linear infinite;
 }
 
-@keyframes "bannermove" {
+@keyframes iconmove {
  0% {
     margin-left: 0px;
  }
  100% {
-    margin-left: -1000px;
+    margin-left: -1330px;
  }
 
 }
 
-@-moz-keyframes bannermove {
+@-moz-keyframes iconmove {
  0% {
    margin-left: 0px;
  }
  100% {
-   margin-left: -1000px;
+   margin-left: -1330px;
  }
 
 }
 
-@-webkit-keyframes "bannermove" {
+@-webkit-keyframes iconmove {
  0% {
    margin-left: 0px;
  }
  100% {
-   margin-left: -1000px;
+   margin-left: -1330px;
  }
 
 }
 
-@-ms-keyframes "bannermove" {
+
+@-o-keyframes iconmove {
  0% {
    margin-left: 0px;
  }
  100% {
-   margin-left: -1000px;
+   margin-left: -1330px;
  }
 
 }
 
-@-o-keyframes "bannermove" {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -1000px;
- }
+.homepageInfobox img {
+    /*padding: 20px;*/
+    margin: 20px;
+    opacity: 0.5;
 
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.homepageInfobox img:hover {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+    opacity: 1;
+	cursor: pointer;
 }
 
 .infoboxText {

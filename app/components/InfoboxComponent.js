@@ -29,13 +29,24 @@ export default class Infobox extends Component {
         </div>
 
         <div style={{margin: '20px', marginTop: '40px'}}>
-          <img className="first" src="images/icons/postgres.png"/>
-          <img src="images/icons/node.png"/>
-          <img src="images/icons/javascript.png"/>
-          <img src="images/icons/react.png"/>
-          <img src="images/icons/redux.png"/>
-          <img src="images/icons/webpack.png"/>
-          <img src="images/icons/git.png"/>
+          <div style={{width: '1400px', height: '200px', overflow: 'hidden'}}>
+            <img className="first" src="images/icons/postgres.png"/>
+            <img src="images/icons/node.png"/>
+            <img src="images/icons/javascript.png"/>
+            <img src="images/icons/react.png"/>
+            <img src="images/icons/redux.png"/>
+            <img src="images/icons/webpack.png"/>
+            <img src="images/icons/git.png"/>
+
+            <img src="images/icons/postgres.png"/>
+            <img src="images/icons/node.png"/>
+            <img src="images/icons/javascript.png"/>
+            <img src="images/icons/react.png"/>
+          </div>
+
+          <div>
+
+          </div>
         </div>
       </div>
     )
