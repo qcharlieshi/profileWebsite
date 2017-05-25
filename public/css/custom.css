@@ -112,18 +112,83 @@ hr.fancy {
     padding: 20px;
 }
 
+/*Home Page Infoboxes*/
 .homepageInfobox {
     /*float: left;*/
     display: inline-block;
     /*background-color: #f1f2f3;*/
+    overflow: hidden;
     padding: 20px;
     width: 90%;
-    height: 50%;
+    height: 450px;
     margin: 20px;
     border-width: 2px;
     border-style: solid;
     border-color: #D9B310;
     border-radius: 4px;
+}
+
+.homepageInfobox img {
+    padding: 20px;
+}
+
+/*Animations for Infobox*/
+.first {
+	-webkit-animation: bannermove 20s linear infinite;
+	   -moz-animation: bannermove 20s linear infinite;
+	    -ms-animation: bannermove 20s linear infinite;
+	     -o-animation: bannermove 20s linear infinite;
+	        animation: bannermove 20s linear infinite;
+}
+
+@keyframes "bannermove" {
+ 0% {
+    margin-left: 0px;
+ }
+ 100% {
+    margin-left: -1000px;
+ }
+
+}
+
+@-moz-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -1000px;
+ }
+
+}
+
+@-webkit-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -1000px;
+ }
+
+}
+
+@-ms-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -1000px;
+ }
+
+}
+
+@-o-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -1000px;
+ }
+
 }
 
 .infoboxText {
@@ -133,10 +198,6 @@ hr.fancy {
     font-family: Tungsten;
     font-weight: bold;
     font-size: 40px;
-}
-
-#infoboxCompanies {
-    /*float: right;*/
 }
 
 /*Portfolio Page*/

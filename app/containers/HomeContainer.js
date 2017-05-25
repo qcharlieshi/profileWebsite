@@ -4,7 +4,7 @@
 
 import React, {Component} from 'react';
 import ParallaxComponent from '../components/ParallaxComponent';
-import Infobox from '../components/Infobox';
+import Infobox from '../components/InfoboxComponent';
 
 
 export default class HomeContainer extends Component {
@@ -44,7 +44,6 @@ export default class HomeContainer extends Component {
           <div>
           {/*Parallax Image Components*/}
           <div style={{height: '1000px', width: '100%', marginTop: '-100px'}}>
-          {/*<div className="row" style={{height: '1000px', width: '100%', marginTop: '-100px'}}>*/}
 
             <ParallaxComponent
                                                       speed='-0.7'
