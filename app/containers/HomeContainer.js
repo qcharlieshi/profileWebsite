@@ -40,11 +40,14 @@ export default class HomeContainer extends Component {
       }
 
       return(
-        <div>
+
+          <div>
           {/*Parallax Image Components*/}
-          <div className="row" style={{height: '1000px', width: '1600px', marginTop: '-100px', marginLeft: '0px'}}>
+          <div style={{height: '1000px', width: '100%', marginTop: '-100px'}}>
+          {/*<div className="row" style={{height: '1000px', width: '100%', marginTop: '-100px'}}>*/}
+
             <ParallaxComponent
-                                                      speed='-0.6'
+                                                      speed='-0.7'
                                                       image={ '../images/parallax/parallax0edit.png' }
                                                       zindex="-10"
                                                       top='0%'
@@ -116,61 +119,68 @@ export default class HomeContainer extends Component {
           </div>
 
           {/*All black component*/}
-          <ParallaxComponent
-            speed = '.5'
-            color = '#1D2731'
-            zindex = '-1'
-            top = '48%'
-            height = '120%'
-          >
-            <div className="yellowCard" style={this.state.yellowCardStyle}>
-              <div className="headerText">Full Stack Software Engineer & Designer</div>
-              <hr className="fancy"/>
-              <div className="bodyText">
-                <p>
-                  Hello, my name is <b>Charlie Shi</b> and I’m a software engineer that graduated
-                  from Emory University in 2013 with a finance degree. After spending some
-                  time in banking and consulting I made the decision to get back to my first love,
-                  software engineering, by taking the full-time web immersive program at Fullstack Academy.
-                  My current expertise lies in web development whether its creating a server to serve up a
-                  RESTful API or carefully crafting a beautiful component in React and CSS. I pride myself
-                  by having a mix of technical skill and creative ingenuity.
-                </p>
+          {/*<div className="row-fluid">*/}
+            <ParallaxComponent
+              speed = '.5'
+              color = '#1D2731'
+              zindex = '-1'
+              top = '48%'
+              height = '120%'
+            >
+              <div className="yellowCard" style={this.state.yellowCardStyle}>
+                <div className="headerText">Full Stack Software Engineer & Designer</div>
+                <hr className="fancy"/>
+                <div className="bodyText">
+                  <p>
+                    Hello, my name is <b>Charlie Shi</b> and I’m a software engineer that graduated
+                    from Emory University in 2013 with a finance degree. After spending some
+                    time in banking and consulting I made the decision to get back to my first love,
+                    software engineering, by taking the full-time web immersive program at Fullstack Academy.
+                    My current expertise lies in web development whether its creating a server to serve up a
+                    RESTful API or carefully crafting a beautiful component in React and CSS. I pride myself
+                    by having a mix of technical skill and creative ingenuity.
+                  </p>
 
-                <p>
-                  To view the rest of my developer story click here. You can view my resume in the about section
-                  of your navbar or find my contact information by scrolling further down.
-                </p>
+                  <p>
+                    To view the rest of my developer story click here. You can view my resume in the about section
+                    of your navbar or find my contact information by scrolling further down.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <Infobox name="Technology"/>
+              <div className="row" style={{marginRight: '0px'}}>
+                <div className="col-6">
+                  <Infobox name="Technology"/>
+                </div>
 
-            <div className="homepageInfobox" id="infoboxCompanies">
-              test content 2
-            </div>
+                <div className="col-6">
+                  <div className="homepageInfobox" id="infoboxCompanies">
+                    test content 2
+                  </div>
+                </div>
+              </div>
 
-          {/*Test Content*/}
-          <ParallaxComponent
-            speed = '.5'
-            color = '#D9B310'
-            zindex = '1000'
-            top = '75%'
-            height = '400px'
-          >
-          </ParallaxComponent>
+            <ParallaxComponent
+              speed = '.5'
+              color = '#D9B310'
+              zindex = '1000'
+              top = '75%'
+              height = '400px'
+            >
+            </ParallaxComponent>
 
-          <ParallaxComponent
-            speed = '.5'
-            color = '#1D2731'
-            zindex = '-1'
-            top = '80%'
-          >
-          </ParallaxComponent>
+            <ParallaxComponent
+              speed = '.5'
+              color = '#1D2731'
+              zindex = '-1'
+              top = '80%'
+            >
+            </ParallaxComponent>
 
-          </ParallaxComponent>
-
+            </ParallaxComponent>
+          {/*</div>*/}
         </div>
+
       )
     }
 }

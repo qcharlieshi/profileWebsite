@@ -29,8 +29,6 @@
     src: url(../fonts/ArcherPro-Medium.otf) format("opentype");
 }
 
-
-
 /*Text Highlight Navbar*/
 div.navContainer
 {
@@ -43,7 +41,7 @@ div.navContainer
     background-color: #1D2731;
     box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    width: 100%;
+    width: 101%;
 
 }
 
@@ -115,10 +113,11 @@ hr.fancy {
 }
 
 .homepageInfobox {
-    float: left;
+    /*float: left;*/
+    display: inline-block;
     /*background-color: #f1f2f3;*/
     padding: 20px;
-    width: 47%;
+    width: 90%;
     height: 50%;
     margin: 20px;
     border-width: 2px;
@@ -137,7 +136,7 @@ hr.fancy {
 }
 
 #infoboxCompanies {
-    float: right;
+    /*float: right;*/
 }
 
 /*Portfolio Page*/

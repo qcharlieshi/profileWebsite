@@ -14,7 +14,7 @@ export default class Infobox extends Component {
   }
 
   componentWillUnmount() {
-    window.addEventListener()
+    // window.addEventListener()
   }
 
   handleHover() {
@@ -29,7 +29,7 @@ export default class Infobox extends Component {
         </div>
 
         <div style={{margin: '20px', marginTop: '40px'}}>
-          test content
+          <img src="../../public/images/icons/postgres.png"/>
         </div>
       </div>
     )
