@@ -1,55 +1,8 @@
-# Hi, I'm bones
+# Charlie's Profile Site
 
-I'm a happy little skeleton. You can clone me to use as a starter on your projects!
-I have React, Redux, Sequelize, and Express all just rattling around in here ready
-to go.
+Visit me @ www.thetechnocratexplorer.com
 
-## I need node >= 6.7.0
-
-If you don't have it, I'll complain and tell you how to install it.
-
-## 1. Make me into something!
-
-Create a git repo however you want to. You can fork me on Github, but you can only do
-that once (so weird!). You can also create a Github repo and clone it, or just do
-`git init` in an empty directory on your machine.
-
-After you have a repo on your machine:
-
-```
-git remote add bones https://github.com/FullstackAcademy/bones.git
-git fetch bones
-git merge bones/master
-```
-
-And then you'll have me! If I change—which I probably will—you can get the most recent
-version by doing this again:
-
-```
-git fetch bones
-git merge bones/master
-```
-
-## 2. I need a name.
-
-I don't have a name. I think I used to have one, but it turned to dust right along with my
-heart and liver and pituitary gland and all that stuff.
-
-Anyway, I'll need one. Give me a name in `package.json`.
-
-## 3. Start my dusty heart
-
-Short and sweet:
-
-```
-npm install
-npm run build-watch
-npm start
-```
-
-`npm start` doesn't build, so watch out for that. The reason it doesn't build is because you
-probably want to watch the build and run me in separate terminals. Otherwise, build errors get
-all mixed in with HTTP request logging.
+Created with Javascript ES6, Node, Express, Postgres and React
 
 ## My anatomy
 
@@ -62,14 +15,6 @@ assuming you're using postgres.
 
 `/bin` has scripts. (Right now it has *one* script that creates a useful symlink.)
 
-## Conventions
-
-I use `require` and `module.exports` in `.js` files.
-
-I use `import` and `export` in `.jsx` files, unless `require` makes for cleaner code.
-
-I use two spaces, no semi-colons, and trailing commas where possible. I'll
-have a linter someday soon.
 
 ## Quick Heroku deployment
 
